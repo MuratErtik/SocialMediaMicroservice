@@ -2,6 +2,8 @@ dependencies {
     implementation libs.springBootDataJpa
     implementation libs.postgreSQL
     implementation libs.lombok
+    implementation libs.validation
 
     annotationProcessor libs.lombok
+    annotationProcessor libs.validation
 }
