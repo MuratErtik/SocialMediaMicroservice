@@ -1,0 +1,4 @@
+rootProject.name = 'SocialMediaMicroservice'
+include 'AuthMicroservice'
+include 'AuthMicroservice'
+include 'UserMicroservice'
