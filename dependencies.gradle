@@ -11,6 +11,10 @@ ext {
     libs = [
         springBootStarterWeb          : "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
         springCloudStarterOpenFeign   : "org.springframework.cloud:spring-cloud-starter-openfeign:${versions.springCloud}",
+        springCloudConfig             : "org.springframework.cloud:spring-cloud-starter-config:${versions.springCloud}",
+        springCloudConfigServer       : "org.springframework.cloud:spring-cloud-config-server:${versions.springCloud}",
+        springCloudConfigClient       : "org.springframework.cloud:spring-cloud-config-client:${versions.springCloud}",
+
         springBootDataJpa             : "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
         springBootDataMongo           : "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBoot}",
         postgreSQL                    : "org.postgresql:postgresql:${versions.postgreSQL}",
