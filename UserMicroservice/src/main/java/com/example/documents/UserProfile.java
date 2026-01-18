@@ -1,0 +1,34 @@
+package com.example.documents;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Document
+public class UserProfile {
+
+    @Id
+    String id;
+
+    String authId;
+    String username;
+    String password;
+    String firstName;
+    String lastName;
+    String email;
+    String phone;
+    String avatar;
+    String insta;
+    String twitter;
+    Boolean isActive;
+    Long createdAt;
+
+}
