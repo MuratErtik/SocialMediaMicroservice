@@ -3,6 +3,7 @@ dependencies {
     implementation libs.postgreSQL
     implementation libs.lombok
     implementation libs.validation
+    implementation libs.springCloudStarterOpenFeign
 
     annotationProcessor libs.lombok
     annotationProcessor libs.validation
