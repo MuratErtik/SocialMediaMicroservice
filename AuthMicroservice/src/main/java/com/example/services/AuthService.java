@@ -1,9 +1,11 @@
 package com.example.services;
 
+import com.example.dto.requests.CreateUserRequest;
 import com.example.dto.requests.LoginRequest;
 import com.example.dto.requests.RegisterRequest;
 import com.example.dto.responses.RegisterResponse;
 import com.example.entities.Auth;
+import com.example.manager.UserProfileManager;
 import com.example.repositories.AuthRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +18,10 @@ public class AuthService {
 
     private final AuthRepository authRepository;
 
+    private final UserProfileManager userProfileManager;
 
+
+//exceptionhandler implement later!
     public RegisterResponse register(@Valid RegisterRequest request) throws BadRequestException {
 
         if (!request.getPassword().equals(request.getRepassword())){
@@ -27,6 +32,13 @@ public class AuthService {
                         .email(request.getEmail())
                         .username(request.getUsername())
                         .password(request.getPassword())
+
+                .build());
+
+        userProfileManager.createUser(CreateUserRequest.builder()
+                        .authId(auth.getId())
+                        .email(auth.getEmail())
+                        .username(auth.getUsername())
 
                 .build());
 
