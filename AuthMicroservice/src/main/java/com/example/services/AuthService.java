@@ -1,5 +1,6 @@
 package com.example.services;
 
+import com.example.dto.requests.LoginRequest;
 import com.example.dto.requests.RegisterRequest;
 import com.example.dto.responses.RegisterResponse;
 import com.example.entities.Auth;
@@ -37,4 +38,8 @@ public class AuthService {
     }
 
 
+    public Boolean login(@Valid LoginRequest request) {
+
+        return authRepository.existsByUsernameAndPassword(request.getUsername(),request.getPassword());
+    }
 }
