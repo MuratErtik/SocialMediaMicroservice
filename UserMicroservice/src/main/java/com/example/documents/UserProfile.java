@@ -18,7 +18,7 @@ public class UserProfile {
     @Id
     String id;
 
-    String authId;
+    Long authId;
     String username;
     String password;
     String firstName;
@@ -26,7 +26,7 @@ public class UserProfile {
     String email;
     String phone;
     String avatar;
-    String insta;
+    String instagram;
     String twitter;
     Boolean isActive;
     Long createdAt;
