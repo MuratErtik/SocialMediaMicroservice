@@ -10,6 +10,7 @@ public class RestApis {
     public static final String AUTHSERVICE = DEVELOPER+TEST+"/auth";
     public static final String REGISTER = "/register";
     public static final String LOGIN = "/login";
-
+    public static final String USERPROFILEMANAGER = "http://localhost:9091/dev/v1/user-profile";
+    public static final String CREATE_USER = "/create-user";
 
 }
