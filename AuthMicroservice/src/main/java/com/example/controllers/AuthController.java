@@ -1,5 +1,6 @@
 package com.example.controllers;
 
+import com.example.dto.requests.LoginRequest;
 import com.example.dto.requests.RegisterRequest;
 import com.example.dto.responses.RegisterResponse;
 import com.example.services.AuthService;
@@ -12,17 +13,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+import static com.example.configs.RestApis.*;
+
 @RestController
 @RequiredArgsConstructor
-@RequestMapping
+@RequestMapping(AUTHSERVICE)
 public class AuthController {
     private final AuthService authService;
 
-    @PostMapping("/register")
+    @PostMapping(REGISTER)
     public ResponseEntity<RegisterResponse> register(@RequestBody @Valid RegisterRequest request) throws BadRequestException {
 
         return ResponseEntity.ok(authService.register(request));
 
     }
+
+    @PostMapping(LOGIN)
+    public ResponseEntity<Boolean> login(@RequestBody @Valid LoginRequest request) {
+
+        return ResponseEntity.ok(authService.login(request));
+
+    }
+
 
 }
