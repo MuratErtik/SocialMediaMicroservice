@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      uri: ${CONFIG_SERVER}
+      uri: http://service-loadbalancer-config:8888
   config:
     import: "configserver:"
   application:
